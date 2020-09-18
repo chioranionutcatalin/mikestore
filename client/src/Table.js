@@ -57,7 +57,8 @@ export const Table = () => {
     window.location.reload();
   }; 
    //<Button onClick={() => update(row.original)} variant="warning" size="sm" >Modifica</Button>
-  const columns = [{
+ 
+   const columns = [{
     Header: 'Clienti Mike',
     columns : [
       {
