@@ -7,6 +7,7 @@ const path = require('path');
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use('/api', require('./router/sheet'));
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
@@ -16,9 +17,6 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 }
-
-
-app.use('/api', require('./router/sheet'));
 
 const port = process.env.PORT || 5000;
 
